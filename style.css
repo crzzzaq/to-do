@@ -11,6 +11,7 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     padding: 20px;
+    background-color: rgb(255, 186, 126);
 }
 
 ul {
@@ -25,6 +26,9 @@ ul>li {
 .container {
     max-width: 1070px;
     margin: 0 auto;
+    border: 3px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .header {
@@ -33,6 +37,7 @@ ul>li {
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 20px;
+
 }
 
 /* Блок добавления задачи (поле и кнопка) */
@@ -43,6 +48,9 @@ ul>li {
     border-radius: 3px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.514);
     flex-basis: 450px;
+    border: 1px solid black;
+
+
 }
 
 /* Поле ввода */
@@ -60,7 +68,10 @@ ul>li {
 }
 
 /* Кнопка добавления задачи */
-#addBtn {}
+#addBtn {
+    border: 1px solid black;
+
+}
 
 /* Список задач */
 
@@ -85,6 +96,12 @@ ul>li {
     flex-shrink: 0;
 }
 
+.fa-regular {
+    color: rgb(29, 107, 3);
+    height: 5px;
+    width: 5px;
+
+}
 
 /* Символ корзины */
 .fa-trash-can {}
