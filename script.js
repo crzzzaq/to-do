@@ -1,4 +1,7 @@
+
+
 let addBtn = document.querySelector('#addBtn');
+let input = document.querySelector('#taskInput');
 let taskInput = document.querySelector('#taskInput');
 let list = document.querySelector('#list');
 
@@ -38,7 +41,7 @@ function addTask(newItem) {
     let newTask = {
         id: Date.now(),
         text: taskInput.value,
-        done: false
+        complete: false
     }
 
     tasks.push(newTask);
@@ -80,63 +83,8 @@ function removeTask(target) {
     })
 
     task.splise(index, 1);
-    console.log(tasks)
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*addBtn.addEventListener('click', () => {
-    let element = document.createElement('li');
-    element.classList.add('item');
-    element.textContent = taskInput.value;
-    list.append(element);
-    input.value = " ";
-
-    let item = document.createElement('div');
-    item.className = 'item__btns';
-    element.append(item);
-
-
-    let checkBox = document.createElement('i');
-    checkBox.className = "fa-solid fa-check";
-    item.append(checkBox);
-
-    checkBox.addEventListener('click', function () {
-        element.classList.toggle('done');
-
-    })
-
-    let delBtn = document.createElement('i');
-    delBtn.className = "fa-solid fa-trash";
-    item.append(delBtn);
-
-    delBtn.addEventListener('click', function () {
-        list.removeChild(element);
-    })
-    taskInput.value = " "
-    localStorage.setItem('htmlLs', list.innerHTML)
-})*/
+function writeLS() {
+    localStorage.setItem('tasksLS', JSON.stringify(tasks));
+}

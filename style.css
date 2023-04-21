@@ -1,12 +1,11 @@
+
 * {
     box-sizing: border-box;
 }
-
 html,
 body {
     height: 100%;
 }
-
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -18,17 +17,13 @@ ul {
     margin: 0;
     padding: 0;
 }
-
 ul>li {
     list-style: none;
 }
-
 .container {
     max-width: 1070px;
     margin: 0 auto;
-    border: 3px solid black;
-    padding-left: 10px;
-    padding-right: 10px;
+    
 }
 
 .header {
@@ -61,13 +56,13 @@ ul>li {
     font-size: 20px;
     flex: 1 1 450px;
 }
-
 /* Плейсхолдер */
 #taskInput::placeholder {
     color: rgba(128, 128, 128, 0.384);
 }
 
 /* Кнопка добавления задачи */
+#addBtn {}
 #addBtn {
     border: 1px solid black;
 
@@ -79,38 +74,41 @@ ul>li {
     margin: 0 auto;
     max-width: 450px;
 }
-
 /* Элемент списка */
-
 .item {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    
     border-radius: 3px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.514);
     background-color: white;
+    height: 30px;
+    
 }
-
 /* Запретить ужиматься блоку с кнопками в элементе списка*/
 .item__btns {
     flex-shrink: 0;
+    
+   
+   
+
 }
 
 .fa-regular {
-    color: rgb(29, 107, 3);
+    color: rgb(36, 133, 4);
     height: 5px;
     width: 5px;
-
 }
 
 /* Символ корзины */
-.fa-trash-can {}
-
+.fa-trash-can {
+   color: rgb(177, 7, 7);
+}
 /* Символ чекбокса */
 .fa-square-check {
     margin-right: 20px;
 }
-
 /* Поведение элемента списка если добавлен класс .done */
 .item.done {
     text-decoration: line-through;
